@@ -87,9 +87,7 @@ const MainPage = ({ theme }: Props) => {
   // Run every
   setInterval(runEverySecond, 1000);
 
-  // console.log('timeLeft', timeLeft);
   const percentage = ((getTravelTime(shipLocation) - timeLeft) / getTravelTime(shipLocation)) * 100;
-  // console.log('percentage', percentage, '%');
   const shipPeretage =
     shipStatus === ShipStatus.TRAVELLING
       ? shipLocation === ShipLocation.AUSTERA
@@ -120,7 +118,9 @@ const MainPage = ({ theme }: Props) => {
             }}
           />
         </Box>
-        <Box>{shipStatus === ShipStatus.TRAVELLING && <LinearProgress variant="determinate" value={percentage} />}</Box>
+        <Box>
+          {shipStatus === ShipStatus.TRAVELLING && <LinearProgress variant="determinate" value={shipPeretage} />}
+        </Box>
       </Box>
     </>
   );

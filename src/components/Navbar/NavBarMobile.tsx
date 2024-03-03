@@ -4,11 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { Theme } from '@mui/material/styles';
-import { Drawer, Link } from '@mui/material';
 
 interface Props {
   theme: Theme;
@@ -50,7 +46,7 @@ const NavBarMobile = ({ theme, colorMode }: Props): JSX.Element => {
             textAlign: 'center',
           }}
         >
-          enordin
+          archeship
         </Typography>
       </Box>
     </Toolbar>
