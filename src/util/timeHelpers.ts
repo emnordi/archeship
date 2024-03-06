@@ -12,7 +12,7 @@ export function minutesAndSeconds(seconds: number) {
 }
 
 export function getTravelTime(startLocation: ShipLocation) {
-  return startLocation === ShipLocation.AUSTERA ? getTimeInseconds(10, 22) : getTimeInseconds(10, 48);
+  return startLocation === ShipLocation.AUSTERA ? getTimeInseconds(10, 21) : getTimeInseconds(10, 48);
 }
 
 export function oppositeLocation(startLocation: ShipLocation) {

@@ -13,10 +13,10 @@ interface Props {
 
 const MainPage = ({ theme }: Props) => {
   //Settings to generate correct time and place
-  const startingLocation: ShipLocation = ShipLocation.AUSTERA;
-  const otherLocation: ShipLocation = ShipLocation.TWO_CROWNS;
-  const reportedTimeFromString = new Date('2024-03-02T22:49');
-  const reportedBuffTimer = getTimeInseconds(1, 40);
+  const startingLocation: ShipLocation = ShipLocation.TWO_CROWNS;
+  const otherLocation: ShipLocation = ShipLocation.AUSTERA;
+  const reportedTimeFromString = new Date('2024-03-06T18:48');
+  const reportedBuffTimer = getTimeInseconds(16, 54);
 
   const [shipStatus, setShipStatus] = useState<ShipStatus>(ShipStatus.DOCKED);
   const [shipLocation, setShipLocation] = useState<ShipLocation>(startingLocation);
@@ -107,8 +107,10 @@ const MainPage = ({ theme }: Props) => {
         {shipStatus === ShipStatus.TRAVELLING && <Travel location={shipLocation} timeLeft={timeLeft} />}
         {shipStatus === ShipStatus.DOCKED && <Docked location={shipLocation} timeLeft={timeLeft} />}
         <Box sx={{ display: 'flex' }}>
-          <Typography>{ShipLocation.TWO_CROWNS}</Typography>
-          <Typography sx={{ marginLeft: 'auto' }}>{ShipLocation.AUSTERA}</Typography>
+          <Typography variant="h4">{ShipLocation.TWO_CROWNS}</Typography>
+          <Typography variant="h4" sx={{ marginLeft: 'auto' }}>
+            {ShipLocation.AUSTERA}
+          </Typography>
         </Box>
         <Box sx={{ width: `${shipPeretage}%`, display: 'flex' }}>
           <SailingIcon
