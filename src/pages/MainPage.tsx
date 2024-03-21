@@ -15,8 +15,8 @@ const MainPage = ({ theme }: Props) => {
   //Settings to generate correct time and place
   const startingLocation: ShipLocation = ShipLocation.AUSTERA;
   const otherLocation: ShipLocation = ShipLocation.TWO_CROWNS;
-  const reportedTimeFromString = new Date('2024-03-14T16:38');
-  const reportedBuffTimer = getTimeInseconds(16, 48);
+  const reportedTimeFromString = new Date('2024-03-21T23:12');
+  const reportedBuffTimer = getTimeInseconds(1, 40);
 
   const [shipStatus, setShipStatus] = useState<ShipStatus>(ShipStatus.DOCKED);
   const [shipLocation, setShipLocation] = useState<ShipLocation>(startingLocation);
