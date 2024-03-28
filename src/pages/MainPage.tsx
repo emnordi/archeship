@@ -13,10 +13,10 @@ interface Props {
 
 const MainPage = ({ theme }: Props) => {
   //Settings to generate correct time and place
-  const startingLocation: ShipLocation = ShipLocation.TWO_CROWNS;
-  const otherLocation: ShipLocation = ShipLocation.AUSTERA;
-  const reportedTimeFromString = new Date('2024-03-22T17:55');
-  const reportedBuffTimer = getTimeInseconds(9, 0);
+  const startingLocation: ShipLocation = ShipLocation.AUSTERA;
+  const otherLocation: ShipLocation = ShipLocation.TWO_CROWNS;
+  const reportedTimeFromString = new Date('2024-03-28T21:00');
+  const reportedBuffTimer = getTimeInseconds(3, 53);
 
   const [shipStatus, setShipStatus] = useState<ShipStatus>(ShipStatus.DOCKED);
   const [shipLocation, setShipLocation] = useState<ShipLocation>(startingLocation);
